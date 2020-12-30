@@ -5,7 +5,7 @@
 #include <math.h>
 
 /* Amiga compliant version string */
-const char __ver[] = "\0$VER: StrTok 1.0 (30.12.2020) Brielle Harrison\0";
+const char __ver[] = "\0$VER: StrTok 1.1 (30.12.2020) Brielle Harrison\0";
 
 /* Some helpers to read a file into a C string */
 #define FILE_OK 0
@@ -510,7 +510,7 @@ void FreeArgs(Args *args, unsigned char freeArgStructToo) {
 }
 
 void ShowUsage(STRPTR command) {
-  printf("\nUsage: %s <string> <desired-index> <token> [KEEP] [HELP] [FILE]\n", command);
+  printf("Usage: %s <string> <desired-index> <token> [KEEP] [HELP] [FILE] [TAB|SPACE|NEWLINE]\n", command);
   printf("  <string>         the input string to work on\n");
   printf("  <desired-index>  a 0 based index indicating which part to keep\n");
   printf("  <token>          the string to split the input on (default: \" \")\n\n");
@@ -522,6 +522,10 @@ void ShowUsage(STRPTR command) {
   printf("  [FILE]           when the FILE mode is enabled, the <string> parameter is\n");
   printf("                   considered to be a path to a file to read. The default\n");
   printf("                   token used to split values is converted to a newline\n");
-  printf("                   character (\"\\n\")\n\n");
-  printf("Copyright (c)2020 Brielle Harrison. All Rights Reserved.\n\n");
+  printf("                   character (\"\\n\")\n");
+  printf("  [TAB]            set the token to a tab character\n");
+  printf("  [SPACE]          set the token to a space character\n");
+  printf("  [NEWLINE]        set the token to a newline character\n");
+  printf("  [DEBUG]          display the arguments as they were parsed\n\n");
+  printf("Copyright (c)2020 Brielle Harrison. All Rights Reserved.\n");
 }
