@@ -10,6 +10,7 @@ It also allows the reading of a file's contents as a string when the FILE flag i
 
 ## Usage
 
+```
 Usage: StrTok <string> <desired-index> <token> [KEEP] [HELP] [FILE]
   <string>         the input string to work on
   <desired-index>  a 0 based index indicating which part to keep
@@ -31,3 +32,4 @@ Hidden Flags:
   [NEWLINE]        set the token to a newline chracter
   [TAB]            set the token to a tab character
   [SPACE]          set the token to a space character
+```
